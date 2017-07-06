@@ -262,14 +262,6 @@ h6,
 h1 {
   font-size: 1.3em;
   line-height: 1.33333; }
-
-h1:before {
-  content: "";
-  position: absolute;
-  width: 1em;
-  margin-top: -3px;
-  border-bottom: 3px solid #F4F4EC; }
-
 h2 {
   font-size: 1.3em;
   line-height: 1.33333; }
@@ -311,13 +303,6 @@ blockquote {
 @media (min-width: 600px) {
   h1 {
     font-size: 1.95em; }
-
-  h1:before {
-    content: "";
-    position: absolute;
-    width: 1em;
-    margin-top: -3px;
-    border-bottom: 3px solid #F4F4EC; }
 
   h2 {
     font-size: 1.95em; }
@@ -399,7 +384,7 @@ a {
 a:hover {
   text-decoration: none;
   color: #000000;
-  background: #fff; }
+  }
 
 a:active {
   top: 1px; }
@@ -577,7 +562,6 @@ img {
   max-width: 100%;
   display: inline-block;
   height: auto;
-  float: left;
   margin-right: 2%;
   -webkit-transition: -webkit-filter 1s;
   -moz-transition: -webkit-filter 1s;
