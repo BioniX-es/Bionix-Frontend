@@ -9,6 +9,9 @@
       "outDir": "dist",
       "assets": [
         "assets",
+        "assets/favicon.ico",
+        "assets/img/social-media",
+        "assests/video",
         "favicon.ico"
       ],
       "index": "index.html",
@@ -19,9 +22,17 @@
       "testTsconfig": "tsconfig.spec.json",
       "prefix": "app",
       "styles": [
-        "main.css"
+        "main.css",
+        "./node_modules/tether/dist/css/tether.min.css",
+        "./node_modules/bootstrap/dist/css/bootstrap.min.css",
+        "./node_modules/bootstrap/dist/css/bootstrap-grid.min.css",
+        "./node_modules/tether/dist//css/tether.min.css",
+        "./node_modules/tether/dist//css/tether-theme-basic.css"
       ],
-      "scripts": [],
+      "scripts": [
+        "./node_modules/tether/dist/js/tether.min.js",
+        "./node_modules/bootstrap/dist/js/bootst"
+      ],
       "environmentSource": "environments/environment.ts",
       "environments": {
         "dev": "environments/environment.ts",
