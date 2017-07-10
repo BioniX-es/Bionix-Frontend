@@ -715,7 +715,7 @@ ol.numerical {
 *{margin:0;padding:0;font-family:Lato,sans-serif}
 #poster{margin:0;background-size:cover;min-height:100vh;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex}
 #poster video{position:absolute;z-index:-1;top:0;left:0;width:100%;height:100%;object-fit:fill}
-#poster button{ font-size:120%;text-transform:uppercase;color:#fff;-webkit-align-self:center;-ms-flex-item-align:center;align-self:center;margin:30px auto;background:0 0;padding:30px 30px 60px 50px;border:3px solid #fff;-webkit-transition:background .3s;transition:background .3s}
+#poster button{ font-size:120%;text-transform:uppercase;color:#fff;-webkit-align-self:center;-ms-flex-item-align:center;align-self:center;margin:30px auto;background:0 0;padding:30px 50px 60px 50px;border:3px solid #fff;-webkit-transition:background .3s;transition:background .3s}
 #poster button:hover{background:#020302;cursor:pointer}
 #poster-content{height:550px;margin:0 auto;-webkit-box-orient:vertical;-webkit-box-direction:normal;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-align-self:center;-ms-flex-item-align:center;align-self:center;background:rgba(26,24,26,.3);width:100%;padding:30px 0}
 #poster-content #logo{-webkit-align-self:center;-ms-flex-item-align:center;align-self:center;max-width:45%}
