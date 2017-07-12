@@ -26,9 +26,8 @@
         "../node_modules/tether/dist/css/tether.min.css",
         "../node_modules/bootstrap/dist/css/bootstrap.min.css",
         "../node_modules/bootstrap/dist/css/bootstrap-grid.min.css",
-        "../node_modules/bootstrap/dist/css/bootstrap-theme.min.css",
-        "../node_modules/tether/dist/css/tether.min.css",
-        "../node_modules/tether/dist/css/tether-theme-basic.css"
+        "../node_modules/tether/dist/css/tether-theme-basic.css",
+        "../node_modules/bootstrap/dist/css/bootstrap-reboot.min.css"
       ],
       "scripts": [
         "../node_modules/tether/dist/js/tether.min.js",
