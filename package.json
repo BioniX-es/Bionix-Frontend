@@ -8,7 +8,8 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "compilar-sass": "node-sass ./src/scss -o ./src/css"
   },
   "private": true,
   "dependencies": {
@@ -26,6 +27,7 @@
     "bootstrap": "^4.0.0-alpha.6",
     "core-js": "^2.4.1",
     "font-awesome": "^4.7.0",
+    "node-sass": "^4.5.3",
     "rxjs": "^5.4.2",
     "zone.js": "^0.8.4"
   },

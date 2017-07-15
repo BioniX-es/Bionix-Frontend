@@ -1,0 +1,35 @@
+.social-media-icons {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-align-self: center;
+    -ms-flex-item-align: center;
+    align-self: center;
+    -webkit-box-align: baseline;
+    -webkit-align-items: baseline;
+    -ms-flex-align: baseline;
+    align-items: baseline;
+    width: 30vh
+}
+
+.sm-icon {
+    width: 4vh;
+    opacity: .6;
+    -webkit-transition: all .4s;
+    transition: all .4s
+}
+
+.sm-icon:hover {
+    opacity: 1;
+    -webkit-transform: scale(1.4);
+    -ms-transform: scale(1.4);
+    transform: scale(1.4)
+}
+

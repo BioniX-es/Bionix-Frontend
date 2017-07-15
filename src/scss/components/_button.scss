@@ -1,0 +1,31 @@
+.button{
+     
+    border-radius: 5px;
+    padding:10px;
+    font-size: 80%;
+    display:inline-block;
+    text-decoration: none;
+    border:1px solid ;
+    outline:0;
+    @include boton-generico-formato(#afbdc9,#87929b);
+    cursor:pointer;
+    font-family: "Lucida Grande",Arial,Verdana,sans-serif;
+    color:white;
+    font-size: 80%; 
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+}
+
+@each $name-function, $color in $colors-pallete{
+    .button--#{$name-function}{    
+        @include boton-generico-formato($color,darken($color,10% ));
+    }
+        
+}
+
+@for $size from 1 through length($size-variations){
+    .button--#{nth($size-variations,$size)}{
+        font-size:$size*5px;
+        padding:$size*2px;
+    }
+}

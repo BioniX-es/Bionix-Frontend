@@ -1,0 +1,10 @@
+@mixin boton-generico-formato($bgColor,$borderColor){
+    background-color: $bgColor;
+    border-color: $borderColor;
+    &:hover{
+            background-color:darken($bgColor,15%);
+        }
+    &:active{
+            box-shadow: inset 0px 3px 10px 0px darken($bgColor,30%);
+        }
+}
