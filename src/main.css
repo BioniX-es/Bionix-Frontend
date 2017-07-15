@@ -392,169 +392,172 @@ a:active {
 /* Link */
 /* Buttons */
 .btn, button, .secondaryBtn, .secondaryBtnAlt, .successBtn, .infoBtn, .warningBtn, .dangerBtn {
-  display: inline-block;
-  height: 30px;
-  width: auto;
-  padding: 0 20px;
-  text-align: center;
-  font-weight: 600;
-  line-height: 30px;
-  letter-spacing: 1px;
-  text-decoration: none;
-  background-color: transparent;
-  border-radius: 2px;
-  -moz-border-radius: 0px 0px 2px 2px;
-  -webkit-border-top-left-radius: 2px;
-  -webkit-border-top-right-radius: 2px;
-  -webkit-border-bottom-left-radius: 2px;
-  -webkit-border-bottom-right-radius: 2px;
-  cursor: pointer;
-  margin-bottom: 2%;
-  box-sizing: border-box;
-  font-size: 0.56875em;
-  -webkit-transition: color 0.4s ease;
-  -moz-transition: color 0.4s ease;
-  -ms-transition: color 0.4s ease;
-  -o-transition: color 0.4s ease;
-  transition: color 0.4s ease;
-  -webkit-transition: background-color 0.4s ease;
-  -moz-transition: background-color 0.4s ease;
-  -ms-transition: background-color 0.4s ease;
-  -o-transition: background-color 0.4s ease;
-  transition: background-color 0.4s ease; }
+  
+  display: inline-block !important;
+  height: 30px !important;
+  width: auto !important;
+  padding: 0 20px !important;
+  text-align: center !important;
+  font-weight: 600 !important;
+  line-height: 30px !important;
+  letter-spacing: 1px !important; 
+  text-decoration: none !important;
+  background-color: transparent !important;
+  border-radius: 10px !important;
+  -moz-border-radius: 0px 0px 2px 2px !important;
+  -webkit-border-top-left-radius: 2px !important;
+  -webkit-border-top-right-radius: 2px !important;
+  -webkit-border-bottom-left-radius: 2px !important;
+  -webkit-border-bottom-right-radius: 2px !important;
+  cursor: pointer !important;
+  margin-bottom: 2% !important;
+  box-sizing: border-box !important;
+  font-size: 0.56875em !important;
+  -webkit-transition: color 0.4s ease !important;
+  -moz-transition: color 0.4s ease !important;
+  -ms-transition: color 0.4s ease !important;
+  -o-transition: color 0.4s ease !important;
+  transition: color 0.4s ease !important;
+  -webkit-transition: background-color 0.4s ease !important;
+  -moz-transition: background-color 0.4s ease !important;
+  -ms-transition: background-color 0.4s ease !important;
+  -o-transition: background-color 0.4s ease !important;
+  transition: background-color 0.4s ease !important; }
 
 .btn, button:focus {
-  outline: 0; }
+  outline: 0 !important; }
 
 .btn, button:focus {
-  opacity: 0.6; }
+  opacity: 0.6 !important; }
 
 .btnBlock {
-  width: 100%; }
+  width: 100% !important; }
 
 .btn, button {
-  color: #F4F4EC;
-  border: 1px solid #F4F4EC; }
+  color: #F4F4EC !important;
+  border: 1px solid #F4F4EC !important; }
 
 .secondaryBtn {
-  color: #f4b603;
-  border: 1px solid #f4b603; }
+  color: #f4b603 !important;
+  border: 1px solid #f4b603 !important; }
 
 .successBtn {
-  color: #2ECC71;
-  border: 1px solid #2ECC71; }
+  color: #2ECC71 !important;
+  border: 1px solid #2ECC71 !important; }
 
 .infoBtn {
-  color: #3498DB;
-  border: 1px solid #3498DB; }
+  color: #3498DB !important;
+  border: 1px solid #3498DB !important; }
 
 .warningBtn {
-  color: #F39C12;
-  border: 1px solid #F39C12; }
+  color: #F39C12 !important;
+  border: 1px solid #F39C12 !important; }
 
 .dangerBtn {
-  color: #F62459;
-  border: 1px solid #F62459; }
+  color: #F62459 !important;
+  border: 1px solid #F62459 !important; }
 
 .button:hover, button:hover, .button:focus, button:focus {
-  color: #000000;
-  border-color: #F4F4EC;
-  background-color: #F4F4EC; }
+  color: #000000 !important;
+  border-color: #F4F4EC !important;
+  background-color: #F4F4EC !important; }
 
 .secondaryBtn:hover {
-  color: #000000;
-  border-color: #f4b603;
-  background-color: #f4b603; }
+  color: #000000 !important;
+  border-color: #f4b603 !important;
+  background-color: #f4b603 !important;  }
 
 .successBtn:hover, .successBtn:focus {
-  color: #000000;
-  border-color: #2ECC71;
-  background-color: #2ECC71; }
+  color: #000000 !important;
+  border-color: #2ECC71 !important;
+  background-color: #2ECC71 !important; }
 
 .infoBtn:hover, .infoBtn:focus {
-  color: #000000;
-  border-color: #3498DB;
-  background-color: #3498DB; }
+  color: #000000 !important;
+  border-color: #3498DB !important;
+  background-color: #3498DB !important; }
 
 .warningBtn:hover, .warningBtn:focus {
-  color: #000000;
-  border-color: #F39C12;
-  background-color: #F39C12; }
+  color: #000000 !important;
+  border-color: #F39C12 !important;
+  background-color: #F39C12 !important; }
 
 .dangerBtn:hover, .dangerBtn:focus {
-  color: #000000;
-  border-color: #F62459;
-  background-color: #F62459; }
+  color: #000000 !important;
+  border-color: #F62459 !important;
+  background-color: #F62459 !important; }
 
 .primaryBtnAlt {
-  color: #000000;
-  background-color: #F4F4EC;
-  border: 1px solid #F4F4EC; }
+  color: #000000 !important;
+  background-color: #F4F4EC !important;
+  border: 1px solid #F4F4EC !important; }
 
 .secondaryBtnAlt {
-  color: #000000;
-  background-color: #f4b603;
-  border: 1px solid #f4b603; }
+  color: #000000 !important;
+  background-color: #f4b603 !important;
+  border: 1px solid #f4b603 !important; }
 
 .successBtnAlt {
-  color: #000000;
-  background-color: #2ECC71;
-  border-color: #2ECC71; }
+  color: #000000 !important;
+  background-color: #2ECC71 !important;
+  border-color: #2ECC71 !important; }
 
 .infoBtnAlt {
-  color: #000000;
-  background-color: #3498DB;
-  border-color: #3498DB; }
+  color: #000000 !important ;
+  background-color: #3498DB !important;
+  border-color: #3498DB !important; }
 
 .warningBtnAlt {
-  color: #000000;
-  background-color: #F39C12;
-  border-color: #F39C12; }
+  color: #000000 !important;
+  background-color: #F39C12 !important;
+  border-color: #F39C12 !important; }
 
 .dangerBtnAlt {
-  color: #000000;
-  background-color: #F62459;
-  border-color: #F62459; }
+  color: #000000 !important;
+  background-color: #F62459 !important;
+  border-color: #F62459 !important; }
 
 .primaryBtnAlt:hover, .primaryBtnAlt:focus {
-  color: #F4F4EC;
-  background-color: #000000;
-  border: 1px solid #F4F4EC; }
+  color: #F4F4EC !important;
+  background-color: #000000 !important;
+  border: 1px solid #F4F4EC !important; }
 
 .secondaryBtnAlt:hover, .secondaryBtnAlt:focus {
-  color: #f4b603;
-  background-color: #000000;
-  border: 1px solid #f4b603; }
+  color: #f4b603 !important;
+  background-color: #000000 !important;
+  border: 1px solid #f4b603 !important; }
 
 .successBtnAlt:hover, .successBtnAlt:focus {
-  color: #2ECC71;
-  background-color: #000000;
-  border-color: #2ECC71; }
+  color: #2ECC71 !important;
+  background-color: #000000 !important;
+  border-color: #2ECC71 !important; }
 
 .infoBtnAlt:hover, .infoBtnAlt:focus {
-  color: #3498DB;
-  border-color: #3498DB;
-  background-color: #000000; }
+  color: #3498DB !important;
+  border-color: #3498DB !important;
+  background-color: #000000 !important; }
 
 .warningBtnAlt:hover, .warningBtnAlt:focus {
-  color: #F39C12;
-  border-color: #F39C12;
-  background-color: #000000; }
+  color: #F39C12 !important;
+  border-color: #F39C12 !important;
+  background-color: #000000 !important; }
 
 .dangerBtnAlt:hover, .dangerBtnAlt:focus {
-  color: #F62459;
-  border-color: #F62459;
-  background-color: #000000; }
+  color: #F62459 !important;
+  border-color: #F62459 !important;
+  background-color: #000000 !important; }
 
 .btnLarge {
-  line-height: 51px;
-  height: 51px;
-  font-size: 0.73125em; }
+  border-radius: 10px !important;
+  width: 15% !important;
+  line-height: 51px !important;
+  height: 20% !important;
+  font-size:120% !important; }
 
 .btnSmall {
-  line-height: 27px;
-  height: 27px;
-  font-size: 0.56875em; }
+  line-height: 27px !important;
+  height: 27px !important;
+  font-size: 0.56875em !important; }
 
 /* Buttons */
 /* Images */
@@ -701,7 +704,7 @@ ol.numerical {
   box-shadow: 0px 0px 0px 2px #fff inset; }
 
 .circleIconAlt.warning {
-  box-shadow: 0px 0px 0px 2px #F39C12 inset; }
+  box-shadow: 0px 0px 0px 2px #F39C12 inset!important; }
 
 .circleIconAlt.success {
   box-shadow: 0px 0px 0px 2px #2ECC71 inset; }
@@ -715,10 +718,10 @@ ol.numerical {
 *{margin:0;padding:0;font-family:Lato,sans-serif}
 #poster{margin:0;background-size:cover;min-height:100vh;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex}
 #poster video{position:absolute;z-index:-1;top:0;left:0;width:100%;height:100%;object-fit:fill}
-#poster button{ font-size:120%;text-transform:uppercase;color:#fff;-webkit-align-self:center;-ms-flex-item-align:center;align-self:center;margin:30px auto;background:0 0;padding:30px 50px 60px 50px;border:3px solid #fff;-webkit-transition:background .3s;transition:background .3s}
+#poster button{ font-size:220%;text-transform:uppercase;color:#fff;-webkit-align-self:center;-ms-flex-item-align:center;align-self:center;margin:30px auto;background:0 0;padding:30px 50px 60px 50px;border:3px solid #fff;-webkit-transition:background .3s;transition:background .3s}
 #poster button:hover{background:#020302;cursor:pointer}
 #poster-content{height:550px;margin:0 auto;-webkit-box-orient:vertical;-webkit-box-direction:normal;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-align-self:center;-ms-flex-item-align:center;align-self:center;background:rgba(26,24,26,.3);width:100%;padding:30px 0}
-#poster-content #logo{-webkit-align-self:center;-ms-flex-item-align:center;align-self:center;max-width:45%}
+#poster-content #logo{ margin-bottom:20px;-webkit-align-self:center;-ms-flex-item-align:center;align-self:center;max-width:45%}
 #poster-text{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-justify-content:space-around;-ms-flex-pack:distribute;justify-content:space-around;-webkit-box-orient:vertical;-webkit-box-direction:normal;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-align-self:center;-ms-flex-item-align:center;align-self:center;width:60%;height:50%}
 #poster-text h1{color:#fff;font-size:2.3vmax;-webkit-align-self:center;-ms-flex-item-align:center;align-self:center;text-align:center;font-family:Roboto,Lato,sans-serif;font-weight:700;text-transform:uppercase}
 #poster-text h3{font-weight:200;margin-top:10px;font-size:2vh;color:#fff;-webkit-align-self:center;-ms-flex-item-align:center;align-self:center;text-align:center}
