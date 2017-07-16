@@ -22,13 +22,13 @@
       "testTsconfig": "tsconfig.spec.json",
       "prefix": "app",
       "styles": [
-        "../node_modules/font-awesome/css/font-awesome.min.css",
+        "css/bionix.css",
+        "../node_modules/font-awesome/css/font-awesome.css",
         "../node_modules/tether/dist/css/tether.min.css",
         "../node_modules/bootstrap/dist/css/bootstrap.min.css",
         "../node_modules/bootstrap/dist/css/bootstrap-grid.min.css",
-        "../node_modules/tether/dist/css/tether-theme-basic.css",
-        "../node_modules/bootstrap/dist/css/bootstrap-reboot.min.css",
-        "css/bionix.css"
+        "../node_modules/tether/dist/css/tether-theme-basic.css"
+        
       ],
       "scripts": [
         "../node_modules/jquery/dist/jquery.min.js",

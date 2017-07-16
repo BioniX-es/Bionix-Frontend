@@ -1,4 +1,4 @@
-import { NgModule } from "@angular/core";
+import { NgModule, ModuleWithProviders } from "@angular/core";
 import { CommonModule } from "@angular/common";
 import { LoginService } from "app/shared/login.service";
 
@@ -9,4 +9,12 @@ import { LoginService } from "app/shared/login.service";
   providers: [LoginService],
   declarations: []
 })
-export class SharedModule { }
+export class SharedModule {
+  static forRoot(): ModuleWithProviders {
+    return{
+      ngModule: SharedModule
+    };
+  }
+ }
+
+ export * from "./login.service";

@@ -1,12 +1,11 @@
-.button{
-     
+.button{    
     border-radius: 5px;
     padding:10px;
     font-size: 80%;
     display:inline-block;
     text-decoration: none;
     border:1px solid ;
-    outline:0;
+    outline:0 ;
     @include boton-generico-formato(#afbdc9,#87929b);
     cursor:pointer;
     font-family: "Lucida Grande",Arial,Verdana,sans-serif;
