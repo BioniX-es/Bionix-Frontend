@@ -13,10 +13,9 @@ export class LoginService {
   public login(data: any): Observable<any> {
     const options = new RequestOptions();
     const headers = new Headers();
-    const body = `username=${data.userName}&password=${data.password}&Submit=Login`;
+    const body = `username=${data.value.username}&password=${data.value.password}&Submit=Login`;
     headers.append('Content-Type', 'application/x-www-form-urlencoded');
-    headers.append('Access-Control-Allow-Origin', '*');
     options.headers = headers;
-    return this.http.post(this.API_URL +  "login", data.value, options ).map(res => console.log(res.json()));
+    return this.http.post(this.API_URL +  "login", body, options ).map(res => console.log(res));
   }
 }
