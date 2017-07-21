@@ -1,4 +1,4 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit,ViewEncapsulation } from "@angular/core";
 import { FormGroup, FormArray, FormBuilder,
           Validators  } from "@angular/forms";
 import * as $ from "jquery";
@@ -6,6 +6,7 @@ import {LoginService} from '../../shared/shared.module';
 
 @Component({
   selector: "app-login",
+  encapsulation: ViewEncapsulation.None,
   templateUrl: "./login.component.html",
   styleUrls: ["./login.component.css"],
 })
@@ -35,7 +36,9 @@ export class LoginComponent implements OnInit {
   }
   onSubmit(): void {
     this.loginService.login(this.userForm)
-    .subscribe();
+    .subscribe(
+      (res) => console.log(res),
+      (err) => alert('error'));
   }
 
 }

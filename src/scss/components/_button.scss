@@ -8,9 +8,8 @@
     outline:0 ;
     @include boton-generico-formato(#afbdc9,#87929b);
     cursor:pointer;
-    font-family: "Lucida Grande",Arial,Verdana,sans-serif;
     color:white;
-    font-size: 80%; 
+    font-size: 90%; 
     -webkit-transition-duration: 0.4s;
     transition-duration: 0.4s;
 }

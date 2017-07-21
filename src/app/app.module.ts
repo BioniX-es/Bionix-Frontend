@@ -5,6 +5,8 @@ import { JsonpModule, HttpModule } from "@angular/http";
 import { CoreModule } from "./core/core.module";
 import { SharedModule } from "app/shared/shared.module";
 import { LandScapeComponent } from "app/core/land-scape/land-scape.component";
+import {HttpClientModule} from '@angular/common/http';
+
 
 @NgModule({
   declarations: [],
@@ -12,6 +14,7 @@ import { LandScapeComponent } from "app/core/land-scape/land-scape.component";
     BrowserModule,
     ReactiveFormsModule,
     HttpModule,
+    HttpClientModule,
     JsonpModule,
     CoreModule,
     SharedModule
