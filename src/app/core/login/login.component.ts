@@ -1,8 +1,8 @@
-import { Component, OnInit,ViewEncapsulation } from "@angular/core";
+import { Component, OnInit, ViewEncapsulation } from "@angular/core";
 import { FormGroup, FormArray, FormBuilder,
           Validators  } from "@angular/forms";
 import * as $ from "jquery";
-import {LoginService} from '../../shared/shared.module';
+import { LoginService } from "../../shared";
 
 @Component({
   selector: "app-login",
