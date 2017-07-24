@@ -9,9 +9,9 @@ import {ApiInteUrl, ApiDevUrl} from '../app.config';
 @Injectable()
 export class LoginService {
 
-  API_URL = ApiDevUrl;
+  // API_URL = ApiDevUrl;
 
-  // API_URL = ApiInteUrl;
+  API_URL = ApiInteUrl;
   constructor(private http:  Http) { }
 
   public login(data: any): Observable<any> {
