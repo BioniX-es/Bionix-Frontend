@@ -2,7 +2,7 @@ import { Component, OnInit, ViewEncapsulation } from "@angular/core";
 import { FormGroup, FormArray, FormBuilder,
           Validators  } from "@angular/forms";
 import * as $ from "jquery";
-import { LoginService } from "../../shared";
+import { LoginService, ValidationService } from "../../shared";
 
 @Component({
   selector: "app-login",
@@ -13,6 +13,7 @@ import { LoginService } from "../../shared";
 export class LoginComponent implements OnInit {
 
   public userForm: FormGroup;
+
   constructor(
      private fb: FormBuilder,
      private loginService: LoginService
@@ -20,25 +21,18 @@ export class LoginComponent implements OnInit {
 
   ngOnInit() {
     this.userForm = this.fb.group({
-      username : '',
-      password: ''
+      username : ['', [Validators.required]],
+      password: ['', [Validators.required, ValidationService.passwordValidator]]
     });
-    /* $(document).ready(function(){
-     $('.log-btn').click(function(){
-        $('.log-status').addClass('wrong-entry');
-        $('.alert').fadeIn(500);
-        setTimeout( "$('.alert').fadeOut(1500);", 3000 );
-      });
-      $('.form-control').keypress(function(){
-         $('.log-status').removeClass('wrong-entry');
-      });
-    });*/
   }
+
   onSubmit(): void {
-    this.loginService.login(this.userForm)
-    .subscribe(
-      (res) => console.log(res),
-      (err) => alert('error'));
+    if (this.userForm.dirty && this.userForm.valid) {
+      this.loginService.login(this.userForm)
+      .subscribe(
+        (res) => console.log(res),
+        (err) => alert('error'));
+      }
   }
 
 }

@@ -1,6 +1,6 @@
 <!-- Modal -->
 <div>
-  <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel"
+  <div class="modal fade" id="register-modal" tabindex="-1" role="dialog" aria-labelledby="registerModalLabel"
     aria-hidden="true">
     <div class="modal-dialog" role="document">
       <div class="modal-content  login-form">
@@ -11,17 +11,24 @@
         </button>
         </div>
         <div class=" modal-body position-center">
-          <form [formGroup]="userForm" (ngSubmit)="onSubmit()" novalidate>
+          <form [formGroup]="registerForm" (ngSubmit)="onSubmit()" novalidate>
+            <div class="form-group ">
+              <input type="text" class="form-control" formControlName="realname" placeholder="Real Name " id="realname">
+              <i class="fa fa-user"></i>
+            </div>
             <div class="form-group ">
               <input type="text" class="form-control" formControlName="username" placeholder="Username " id="UserName">
               <i class="fa fa-user"></i>
             </div>
-            <app-error-message [control]="userForm.controls['username']"></app-error-message>
+            <div class="form-group ">
+              <input type="text" class="form-control" formControlName="mail" placeholder="Mail " id="mail">
+              <i class="fa fa-user"></i>
+            </div>
             <div class="form-group log-status">
               <input type="password" class="form-control" formControlName="password" placeholder="Password" id="Passwod">
               <a><i class="fa fa-lock"></i></a>
             </div>
-            <app-error-message [control]="userForm.controls['password']"></app-error-message>          
+            <span class="alert">Invalid Credentials</span>
             <button type="submit" class="log-btn button button--dark">Log in</button>
           </form>
         </div>
