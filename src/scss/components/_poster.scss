@@ -32,6 +32,13 @@
     transition: background .3s;
 }
 
+@media(max-width: 720px) {
+    .poster button{
+        font-size: 60%;
+    }
+}
+
+
 .poster button:hover {
     color:nth($colors,1);
     cursor: pointer
@@ -58,11 +65,17 @@
 }
 
 .poster-content .logo {
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     -webkit-align-self: center;
     -ms-flex-item-align: center;
     align-self: center;
-    max-width: 45%
+    max-width: 40%
+}
+
+@media(max-width:720px){
+    .poster-content .logo{
+        max-width: 25%
+    }
 }
 
 .poster-text {

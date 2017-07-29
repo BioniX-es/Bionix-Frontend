@@ -28,6 +28,10 @@
   -webkit-transition: background .3s;
   transition: background .3s; }
 
+@media (max-width: 720px) {
+  .poster button {
+    font-size: 60%; } }
+
 .poster button:hover {
   color: #9f7e69;
   cursor: pointer; }
@@ -52,11 +56,15 @@
   padding: 30px 0; }
 
 .poster-content .logo {
-  margin-bottom: 20px;
+  margin-bottom: 40px;
   -webkit-align-self: center;
   -ms-flex-item-align: center;
   align-self: center;
-  max-width: 45%; }
+  max-width: 40%; }
+
+@media (max-width: 720px) {
+  .poster-content .logo {
+    max-width: 25%; } }
 
 .poster-text {
   display: -webkit-box;
@@ -714,3 +722,7 @@ html {
 
 .margin-t-90 {
   margin-top: 90px !important; }
+
+@media (max-width: 720px) {
+  .register-form {
+    width: 350px; } }
