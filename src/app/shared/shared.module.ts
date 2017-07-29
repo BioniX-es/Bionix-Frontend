@@ -1,14 +1,15 @@
 import { NgModule, ModuleWithProviders } from "@angular/core";
 import { CommonModule } from "@angular/common";
-import { LoginService, RegisterService, ValidationService } from "./services";
+import { ValidationService } from "./services";
 import { ErrorMessagesComponent } from "./error-messages/error-messages.component";
+import { UserServices } from "./services";
 
 @NgModule({
   imports: [
     CommonModule
   ],
   declarations: [ErrorMessagesComponent],
-  providers: [LoginService, RegisterService, ValidationService],
+  providers: [UserServices, ValidationService],
   exports: [ErrorMessagesComponent]
 })
 export class SharedModule {

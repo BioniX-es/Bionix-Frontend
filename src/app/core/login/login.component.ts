@@ -2,7 +2,7 @@ import { Component, OnInit, ViewEncapsulation } from "@angular/core";
 import { FormGroup, FormArray, FormBuilder,
           Validators  } from "@angular/forms";
 import * as $ from "jquery";
-import { LoginService, ValidationService } from "../../shared";
+import { UserServices, ValidationService } from "../../shared";
 declare var jQuery: any;
 
 @Component({
@@ -18,7 +18,7 @@ export class LoginComponent implements OnInit {
 
   constructor(
      private fb: FormBuilder,
-     private loginService: LoginService
+     private userServices: UserServices
     ) {}
 
   ngOnInit() {
@@ -37,7 +37,7 @@ export class LoginComponent implements OnInit {
 
   onSubmit(): void {
     if (this.userForm.dirty && this.userForm.valid) {
-      this.loginService.login(this.userForm)
+      this.userServices.login(this.userForm)
       .subscribe(
         (res) => (this.invalid = false, alert(true), jQuery("#login-modal").modal("hide")),
         (err) => this.invalid = true );

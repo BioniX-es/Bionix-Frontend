@@ -10,8 +10,8 @@ button:active, .button:active, button:focus, .button:focus, button:hover, .butto
     outline:0 !important;
 }
 
-.login-form{
-  width:350px;
+.register-form{
+  width:450px;
   padding:40px 30px;
   background:#f2efc7;
   border-radius:4px;

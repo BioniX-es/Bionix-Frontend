@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormArray, FormBuilder, Validators } from "@angular/forms";
-import { RegisterService, ValidationService } from "../../shared";
+import { UserServices, ValidationService } from "../../shared";
 import * as $ from "jquery";
 declare var jQuery: any;
 
@@ -11,9 +11,9 @@ declare var jQuery: any;
   styleUrls: ['./register.component.css']
 })
 export class RegisterComponent implements OnInit {
-
+  public invalid: boolean;
   public registerForm: FormGroup;
-  constructor(private fb: FormBuilder){ }
+  constructor(private fb: FormBuilder, private userService: UserServices){ }
 
   ngOnInit() {
     this.registerForm = this.fb.group({
@@ -30,7 +30,12 @@ export class RegisterComponent implements OnInit {
   }
 
   onSubmit(){
-
+  if (this.registerForm.dirty && this.registerForm.valid) {
+      this.userService.signin(this.registerForm)
+      .subscribe(
+        (res) => (this.invalid = false, jQuery("#register-modal").modal("hide"), jQuery('#succes-modal').modal('show')),
+        (err) => this.invalid = true );
+    }
 
   }
 

@@ -7,7 +7,7 @@ import { HttpClient } from "@angular/common/http";
 import {ApiUrl} from '../../app.config';
 
 @Injectable()
-export class LoginService {
+export class UserServices {
 
   API_URL = ApiUrl;
   constructor(private http:  Http) { }
@@ -22,5 +22,18 @@ export class LoginService {
     headers.append('Content-Type', 'application/x-www-form-urlencoded');
     options.headers = headers;
     return this.http.post(this.API_URL +  "login", body, options).map(res => console.log(res));
+  }
+
+  public signin(data: any): Observable<any>{
+    const options = new RequestOptions();
+    const headers = new Headers();
+    // tslint:disable-next-line:max-line-length
+    const body = `userName=${data.value.username}&realName=${data.value.realname}&email=${data.value.mail}&password=${data.value.password}`;
+    headers.append('Access-Control-Allow-Headers', ' Content-Type');
+    headers.append('Access-Control-Allow-Methods', 'DELETE, HEAD, GET, POST, PUT');
+    headers.append('Access-Control-Allow-Origin', '*');
+    headers.append('Content-Type', 'application/x-www-form-urlencoded');
+    options.headers = headers;
+    return this.http.post(this.API_URL + "/registration", body, options).map(res => console.log(res));
   }
 }
