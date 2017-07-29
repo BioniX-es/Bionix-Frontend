@@ -3,6 +3,7 @@ import { FormGroup, FormArray, FormBuilder,
           Validators  } from "@angular/forms";
 import * as $ from "jquery";
 import { LoginService, ValidationService } from "../../shared";
+declare var jQuery: any;
 
 @Component({
   selector: "app-login",
@@ -13,6 +14,7 @@ import { LoginService, ValidationService } from "../../shared";
 export class LoginComponent implements OnInit {
 
   public userForm: FormGroup;
+  public invalid: boolean;
 
   constructor(
      private fb: FormBuilder,
@@ -22,17 +24,24 @@ export class LoginComponent implements OnInit {
   ngOnInit() {
     this.userForm = this.fb.group({
       username : ['', [Validators.required]],
-      password: ['', [Validators.required, ValidationService.passwordValidator]]
+      password: ['', [Validators.required]]
     });
   }
+
+
+  public changueModal(): void{
+    jQuery("#login-modal").modal("hide");
+    jQuery("#register-modal").modal("show");
+  }
+
 
   onSubmit(): void {
     if (this.userForm.dirty && this.userForm.valid) {
       this.loginService.login(this.userForm)
       .subscribe(
-        (res) => console.log(res),
-        (err) => alert('error'));
-      }
+        (res) => (this.invalid = false, alert(true), jQuery("#login-modal").modal("hide")),
+        (err) => this.invalid = true );
+    }
   }
 
 }

@@ -4,13 +4,12 @@ import { Observable } from "rxjs/Rx";
 import 'rxjs/add/operator/map';
 import { Subscription } from "rxjs/Subscription";
 import { HttpClient } from "@angular/common/http";
-import {ApiInteUrl, ApiDevUrl} from '../../app.config';
+import {ApiUrl} from '../../app.config';
 
 @Injectable()
 export class LoginService {
 
-  // API_URL = ApiDevUrl;
-  API_URL = ApiInteUrl;
+  API_URL = ApiUrl;
   constructor(private http:  Http) { }
 
   public login(data: any): Observable<any> {

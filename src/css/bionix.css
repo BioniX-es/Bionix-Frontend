@@ -17,6 +17,7 @@
   object-fit: fill; }
 
 .poster button {
+  padding-bottom: 25px;
   margin-bottom: 20px;
   width: 20%;
   font-size: 120%;
@@ -32,7 +33,7 @@
   cursor: pointer; }
 
 .poster-content {
-  height: 550px;
+  height: 600px;
   margin: 0 auto;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -84,18 +85,24 @@
   align-self: center;
   text-align: center;
   font-family: Roboto, Lato, sans-serif;
-  font-weight: 700;
+  font-weight: 700px;
   text-transform: uppercase; }
 
 .poster-text h3 {
   font-weight: 200;
   margin-top: 10px;
   font-size: 2vh;
+  margin: 20px;
   color: #fff;
   -webkit-align-self: center;
   -ms-flex-item-align: center;
   align-self: center;
   text-align: center; }
+
+.error-message {
+  text-align: center;
+  margin-bottom: 10px;
+  color: #A94442; }
 
 .button {
   border-radius: 5px;
@@ -183,7 +190,7 @@
   display: -ms-flexbox;
   display: flex;
   margin-bottom: 20px;
-  margin-top: 10px;
+  margin-top: 50px;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
@@ -680,3 +687,30 @@ html {
   -webkit-box-sizing: inherit;
   -moz-box-sizing: inherit;
   box-sizing: inherit; }
+
+.margin-t-10 {
+  margin-top: 10px !important; }
+
+.margin-t-20 {
+  margin-top: 20px !important; }
+
+.margin-t-30 {
+  margin-top: 30px !important; }
+
+.margin-t-40 {
+  margin-top: 40px !important; }
+
+.margin-t-50 {
+  margin-top: 50px !important; }
+
+.margin-t-60 {
+  margin-top: 60px !important; }
+
+.margin-t-70 {
+  margin-top: 70px !important; }
+
+.margin-t-80 {
+  margin-top: 80px !important; }
+
+.margin-t-90 {
+  margin-top: 90px !important; }

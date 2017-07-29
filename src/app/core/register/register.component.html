@@ -5,35 +5,38 @@
     <div class="modal-dialog" role="document">
       <div class="modal-content  login-form">
         <div class="modal-header position-center">
-          <h1 class="modal-title" id="exampleModalLabel">Login</h1>
+          <h1 class="modal-title" id="exampleModalLabel">Register</h1>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
         </div>
         <div class=" modal-body position-center">
           <form [formGroup]="registerForm" (ngSubmit)="onSubmit()" novalidate>
+            <app-error-message [control]="this.registerForm.controls['realname']"></app-error-message>
             <div class="form-group ">
               <input type="text" class="form-control" formControlName="realname" placeholder="Real Name " id="realname">
-              <i class="fa fa-user"></i>
+              <i class="fa fa-address-book"></i>
             </div>
+            <app-error-message [control]="this.registerForm.controls['username']"></app-error-message>
             <div class="form-group ">
               <input type="text" class="form-control" formControlName="username" placeholder="Username " id="UserName">
               <i class="fa fa-user"></i>
             </div>
+            <app-error-message [control]="this.registerForm.controls['mail']"></app-error-message>
             <div class="form-group ">
               <input type="text" class="form-control" formControlName="mail" placeholder="Mail " id="mail">
-              <i class="fa fa-user"></i>
+              <i class="fa fa-envelope"></i>
             </div>
+            <app-error-message [control]="this.registerForm.controls['password']"></app-error-message>
             <div class="form-group log-status">
               <input type="password" class="form-control" formControlName="password" placeholder="Password" id="Passwod">
               <a><i class="fa fa-lock"></i></a>
             </div>
-            <span class="alert">Invalid Credentials</span>
-            <button type="submit" class="log-btn button button--dark">Log in</button>
+            <button type="submit" class="log-btn button button--dark">Sign In</button>
           </form>
         </div>
         <div class="modal-footer">
-          <a class="link" href="#">Lost your password?</a>
+          <a class="link" (click)="this.changueModal()" href="#">Ya estas registrado?</a>
         </div>
       </div>
     </div>

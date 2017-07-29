@@ -12,21 +12,23 @@
         </div>
         <div class=" modal-body position-center">
           <form [formGroup]="userForm" (ngSubmit)="onSubmit()" novalidate>
+            <app-error-message [control]="userForm.controls['username']"></app-error-message>
             <div class="form-group ">
               <input type="text" class="form-control" formControlName="username" placeholder="Username " id="UserName">
               <i class="fa fa-user"></i>
             </div>
-            <app-error-message [control]="userForm.controls['username']"></app-error-message>
+            <app-error-message [control]="userForm.controls['password']"></app-error-message>          
             <div class="form-group log-status">
               <input type="password" class="form-control" formControlName="password" placeholder="Password" id="Passwod">
               <a><i class="fa fa-lock"></i></a>
             </div>
-            <app-error-message [control]="userForm.controls['password']"></app-error-message>          
+            <div *ngIf="invalid" class="error-message" >Invalid  Credentials</div>  
             <button type="submit" class="log-btn button button--dark">Log in</button>
           </form>
         </div>
-        <div class="modal-footer">
-          <a class="link" href="#">Lost your password?</a>
+        <div class="">
+          <a class="link" href="#">Has olvidado tu contrasña?</a>
+          <a class="link"  (click)="this.changueModal()"  href="#">No estas registrado?</a>
         </div>
       </div>
     </div>
