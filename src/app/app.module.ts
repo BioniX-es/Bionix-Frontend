@@ -6,6 +6,9 @@ import { CoreModule } from "./core/core.module";
 import { SharedModule } from "app/shared/shared.module";
 import { LandScapeComponent } from "app/core/land-scape/land-scape.component";
 import {HttpClientModule} from '@angular/common/http';
+import { HomeModule } from "app/core/home/home.module";
+import { CoreComponent } from "app/core/core.component";
+
 
 
 @NgModule({
@@ -20,6 +23,6 @@ import {HttpClientModule} from '@angular/common/http';
     SharedModule
   ],
   providers: [],
-  bootstrap: [LandScapeComponent]
+  bootstrap: [CoreComponent]
 })
 export class AppModule { }

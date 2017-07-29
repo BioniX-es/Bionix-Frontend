@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormArray, FormBuilder, Validators } from "@angular/forms";
-import { UserServices, ValidationService } from "../../shared";
 import * as $ from "jquery";
+import { UserServices, ValidationService } from "app/shared";
 declare var jQuery: any;
 
 
