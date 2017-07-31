@@ -1,8 +1,6 @@
-@import "abstract/_variables.scss";
-@import "abstract/_mixins.scss";
-@import "components/_poster.scss";
-@import "components/_button.scss";
-@import "components/_social-media-icons.scss";
-@import "base/_base.scss";
-@import "base/_reset.scss";
-@import "layout/_layout.scss";
+@charset 'utf-8';
+
+@import "abstract/__abstract-dir";
+@import "components/__components-dir";
+@import "base/__base-dir";
+@import "layout/__layout-dir";
