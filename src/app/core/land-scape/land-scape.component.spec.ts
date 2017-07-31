@@ -1,6 +1,9 @@
 import { async, ComponentFixture, TestBed } from "@angular/core/testing";
-
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { LandScapeComponent } from "./land-scape.component";
+import { RegisterComponent, LoginComponent } from "app/core/land-scape";
+import { ErrorMessagesComponent, UserServices } from "app/shared";
+import { Http, ConnectionBackend, RequestOptions, HttpModule, Headers } from "@angular/http";
 
 describe("LandScapeComponent", () => {
   let component: LandScapeComponent;
@@ -8,7 +11,9 @@ describe("LandScapeComponent", () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ LandScapeComponent ]
+       imports: [ReactiveFormsModule, FormsModule, HttpModule],
+      declarations: [ LandScapeComponent, RegisterComponent, LoginComponent, ErrorMessagesComponent ],
+      providers: [UserServices, Http, ConnectionBackend, RequestOptions , Headers]
     })
     .compileComponents();
   }));
