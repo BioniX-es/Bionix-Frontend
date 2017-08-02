@@ -1,9 +1,7 @@
 import { NgModule } from "@angular/core";
 import { CommonModule } from "@angular/common";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
-
 import { ErrorMessagesComponent, SharedModule } from "app/shared";
-import { NavbarComponent } from './navbar/navbar.component';
 import { AppRoutingModule } from "app/core/core-routing.module";
 import { CoreComponent } from "app/core/core.component";
 import { LoginComponent, RegisterComponent, LandScapeComponent } from "app/core/land-scape";
@@ -20,6 +18,6 @@ import { AdminPanelModule } from "app/core/admin-panel";
     HomeModule,
      AdminPanelModule
   ],
-  declarations: [ LandScapeComponent, LoginComponent, RegisterComponent, NavbarComponent, CoreComponent]
+  declarations: [ LandScapeComponent, LoginComponent, RegisterComponent, CoreComponent]
 })
 export class CoreModule { }
