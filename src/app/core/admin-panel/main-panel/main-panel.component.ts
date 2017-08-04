@@ -10,6 +10,13 @@ export class MainPanelComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    jQuery('#particles').particleground({
+      dotColor: '#5cbdaa',
+      lineColor: '#5cbdaa'
+    });
+    jQuery('.intro').css({
+      'margin-top': -(jQuery('.intro').height() / 2)
+    });
   }
 
 }

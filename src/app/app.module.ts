@@ -8,6 +8,7 @@ import { LandScapeComponent } from "app/core/land-scape/land-scape.component";
 import {HttpClientModule} from '@angular/common/http';
 import { HomeModule } from "app/core/home/home.module";
 import { CoreComponent } from "app/core/core.component";
+import { AppRoutingModule } from "app/core/core-routing.module";
 
 
 

@@ -1,11 +1,13 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { LandScapeComponent } from "app/core/land-scape/land-scape.component";
+import { AuthGuard } from "app/shared";
+import { MainPanelComponent } from "app/core/admin-panel";
 
 export const routes: Routes = [
   {path: '', pathMatch: 'full', component: LandScapeComponent},
-  { path: 'admin-panel', loadChildren: 'app/core/admin-panel/admin-panel.module.ts#AdminPanelModule' },
-  { path: 'home', loadChildren: 'app/core/home/home.module.ts#HomeModule' }
+  {path: 'admin-panel', component: MainPanelComponent,canActivate: [AuthGuard]},
+  { path: 'home', loadChildren: 'app/core/home/home.module.ts#HomeModule', canActivate: [AuthGuard] }
 ];
 
 @NgModule({

@@ -5,6 +5,7 @@ import 'rxjs/add/operator/map';
 import { Subscription } from "rxjs/Subscription";
 import { HttpClient } from "@angular/common/http";
 import {ApiUrl} from '../../app.config';
+import { User } from "app/shared/models";
 
 @Injectable()
 export class UserServices {
@@ -13,15 +14,16 @@ export class UserServices {
   constructor(private http:  Http) { }
 
   public login(data: any): Observable<any> {
-    const options = new RequestOptions();
+   
     const headers = new Headers();
     const body = `userName=${data.value.username}&password=${data.value.password}&Submit=Login`;
     headers.append('Access-Control-Allow-Headers', ' Content-Type');
     headers.append('Access-Control-Allow-Methods', 'DELETE, HEAD, GET, POST, PUT');
     headers.append('Access-Control-Allow-Origin', '*');
     headers.append('Content-Type', 'application/x-www-form-urlencoded');
+    const options = new RequestOptions({headers: headers, withCredentials: true});
     options.headers = headers;
-    return this.http.post(this.API_URL +  "login", body, options).map(res => console.log(res));
+    return this.http.post(this.API_URL +  "login", body, options).map(res => {return res;});
   }
 
   public signin(data: any): Observable<any>{
@@ -34,6 +36,20 @@ export class UserServices {
     headers.append('Access-Control-Allow-Origin', '*');
     headers.append('Content-Type', 'application/x-www-form-urlencoded');
     options.headers = headers;
-    return this.http.post(this.API_URL + "/registration", body, options).map(res => console.log(res));
+    return this.http.post(this.API_URL + "/registration", body, options);
   }
+
+  public setUserInStorage(): Observable<any>{
+    const headers: Headers = new Headers();
+    headers.append('Access-Control-Allow-Headers', ' Content-Type');
+    headers.append('Access-Control-Allow-Origin', '*');
+    headers.append('Content-Type', 'application/json;charset=UTF-8');
+    const options = new RequestOptions({headers: headers, withCredentials: true});
+    options.headers = headers;
+   return this.http.get(this.API_URL + "whoami", options)
+    .map(res => {
+     localStorage.setItem('user', JSON.stringify(res.json() as User));
+    });
+  }
+
 }

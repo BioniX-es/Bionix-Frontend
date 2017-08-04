@@ -16,7 +16,7 @@ import { AdminPanelModule } from "app/core/admin-panel";
     SharedModule,
     AppRoutingModule,
     HomeModule,
-     AdminPanelModule
+    AdminPanelModule
   ],
   declarations: [ LandScapeComponent, LoginComponent, RegisterComponent, CoreComponent]
 })

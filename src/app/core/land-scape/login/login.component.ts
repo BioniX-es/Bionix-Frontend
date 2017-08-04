@@ -2,6 +2,8 @@ import { Component, OnInit, ViewEncapsulation } from "@angular/core";
 import { FormGroup, FormArray, FormBuilder,
           Validators  } from "@angular/forms";
 import { UserServices, ValidationService } from "app/shared";
+import { User } from "app/shared/models";
+import { Router } from '@angular/router';
 declare var jQuery: any;
 
 @Component({
@@ -16,6 +18,7 @@ export class LoginComponent implements OnInit {
   public invalid: boolean;
 
   constructor(
+     private router: Router,
      private fb: FormBuilder,
      private userServices: UserServices
     ) {}
@@ -33,13 +36,18 @@ export class LoginComponent implements OnInit {
     jQuery("#register-modal").modal("show");
   }
 
-
   onSubmit(): void {
     if (this.userForm.dirty && this.userForm.valid) {
       this.userServices.login(this.userForm)
       .subscribe(
-        (res) => (this.invalid = false, alert(true), jQuery("#login-modal").modal("hide")),
-        (err) => this.invalid = true );
+        (res: Response) => (
+          this.invalid = false, console.log(res),
+          jQuery("#login-modal").modal("hide")
+          ),
+        (err) => this.invalid = true ,
+        () => (this.userServices.setUserInStorage().subscribe(),
+         this.router.navigate(['/admin-panel'])
+      ));
     }
   }
 
