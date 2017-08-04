@@ -5,7 +5,9 @@ import { User, Role } from "app/shared/models";
 
 @Injectable()
 export class AuthGuard implements CanActivate {
+
   public userLogged: User;
+  public haveRole: boolean = false;
 
   constructor (private router: Router){}
 
@@ -14,7 +16,9 @@ export class AuthGuard implements CanActivate {
     if (this.userLogged != null){
       for (let index = 0; index < this.userLogged.roles.length; index++) {
         const role: Role = this.userLogged.roles[index];
+        console.log(role.name);
         if (role.name === 'SUPERVISOR'){
+          this.haveRole = true;
           return true;
         }else{
           this.router.navigate(['/home']);

@@ -43,7 +43,8 @@ export class LoginComponent implements OnInit {
         (res: Response) => (
           this.invalid = false,
           jQuery("#login-modal").modal("hide"),
-          this.userServices.setUserInStorage().subscribe(() => { this.router.navigate(['/admin-panel']); })
+          this.userServices.setUserInStorage()
+            .subscribe(() => { this.router.navigate(['/admin-panel']); })
           ),
         (err) => this.invalid = true);
     };
