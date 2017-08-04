@@ -6,8 +6,8 @@ import { MainPanelComponent } from "app/core/admin-panel";
 
 export const routes: Routes = [
   {path: '', pathMatch: 'full', component: LandScapeComponent},
-  {path: 'admin-panel', component: MainPanelComponent,canActivate: [AuthGuard]},
-  { path: 'home', loadChildren: 'app/core/home/home.module.ts#HomeModule', canActivate: [AuthGuard] }
+  {path: 'admin-panel', component: MainPanelComponent, canActivate: [AuthGuard]},
+  { path: 'home', loadChildren: 'app/core/home/home.module.ts#HomeModule' }
 ];
 
 @NgModule({
