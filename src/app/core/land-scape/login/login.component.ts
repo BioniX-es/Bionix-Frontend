@@ -1,8 +1,9 @@
+import { UserServices } from '../../../shared';
 import { Component, OnInit, ViewEncapsulation } from "@angular/core";
 import { FormGroup, FormArray, FormBuilder,
           Validators  } from "@angular/forms";
-import { UserServices, ValidationService } from "app/shared";
-import { User } from "app/shared/models";
+
+
 import { Router } from '@angular/router';
 declare var jQuery: any;
 

@@ -14,17 +14,17 @@ export class AuthGuard implements CanActivate {
   canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot){
     this.userLogged = JSON.parse(localStorage.getItem('user')) as User;
     if (this.userLogged != null){
-      for (let index = 0; index < this.userLogged.roles.length; index++) {
+      for (let index = 0; index < this.userLogged.roles.length || this.haveRole === true; index++) {
         const role: Role = this.userLogged.roles[index];
         console.log(role.name);
         if (role.name === 'SUPERVISOR'){
           this.haveRole = true;
           return true;
-        }else{
-          this.router.navigate(['/home']);
-          return false;
         }
       }
+    }
+    if (this.haveRole === false){
+      this.router.navigate(['/home']);
     }
     this.router.navigate(['/']);
     return false;

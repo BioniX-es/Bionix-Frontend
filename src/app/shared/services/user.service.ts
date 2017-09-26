@@ -14,7 +14,6 @@ export class UserServices {
   constructor(private http:  Http) { }
 
   public login(data: any): Observable<any> {
-   
     const headers = new Headers();
     const body = `userName=${data.value.username}&password=${data.value.password}&Submit=Login`;
     headers.append('Access-Control-Allow-Headers', ' Content-Type');
