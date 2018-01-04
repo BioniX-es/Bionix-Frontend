@@ -35,7 +35,7 @@ export class UserServices {
     headers.append('Access-Control-Allow-Origin', '*');
     headers.append('Content-Type', 'application/x-www-form-urlencoded');
     options.headers = headers;
-    return this.http.post(this.API_URL + "/registration", body, options);
+    return this.http.post(this.API_URL + "/Users", body, options);
   }
 
   public setUserInStorage(): Observable<any>{
@@ -45,7 +45,7 @@ export class UserServices {
     headers.append('Content-Type', 'application/json;charset=UTF-8');
     const options = new RequestOptions({headers: headers, withCredentials: true});
     options.headers = headers;
-   return this.http.get(this.API_URL + "whoami", options)
+   return this.http.get(this.API_URL + "/Users/Active", options)
     .map(res => {
      localStorage.setItem('user', JSON.stringify(res.json() as User));
     });
